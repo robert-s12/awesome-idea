@@ -1,0 +1,22 @@
+    <div class="movie-list" *ngFor="let movie of movies">
+        <div class="movie-name">{{ movie.name }}</div>
+
+        <div class="movie-release-year">
+            <span class="info">Released Year:</span>
+            <span class="data">{{ movie.releaseYear }}</span>
+        </div>
+
+        <div class="movie-reviews">
+            <span class="info">Reviews:</span>
+            <span class="data">{{ movie.reviews }}</span>
+        </div>
+
+        <div class="movie-revenue">
+            <span class="info">Revenue:</span>
+            <span class="data">{{ movie.revenue | currency }}</span>
+        </div>
+
+        <div class="movie-log-me">
+            <span class="button" (click)="onLogMe()">Log Me</span>
+        </div>
+    </div>

@@ -1,18 +1,25 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
-import { AppComponent } from "./app.component";
+import { AppRootComponent } from "./app.component";
+import { MovieListComponent } from "./movie.list/movie.list.component";
 
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppRootComponent,
+        MovieListComponent
     ],
+
     imports: [
         BrowserModule
     ],
+
     providers: [],
-    bootstrap: [AppComponent]
+
+    bootstrap: [
+        AppRootComponent
+    ]
 })
 export class AppModule {
 }
