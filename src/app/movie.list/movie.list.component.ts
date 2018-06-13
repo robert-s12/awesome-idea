@@ -1,7 +1,7 @@
 import { Component, EventEmitter } from "@angular/core";
 
-import { Movie } from "./Movie";
-import { MovieListDataService } from "./movie.list.data.service";
+import { Movie } from "../models/Movie";
+import { MovieListDataService } from "../services/movie.list.data.service";
 
 
 const componentMetadata: any = {

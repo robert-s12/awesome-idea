@@ -1,0 +1,19 @@
+<div id="movie-info">
+    <div class="summary-view">
+        <div class="movie-image">
+            <img [src]="movie.imgPath" />
+        </div>
+        <div class="movie-title">
+            {{ movie.name }}
+        </div>
+        <div class="movie-short-summary clearfix">
+            <div class="movie-duration">{{ movie.duration }}</div>
+            <div class="movie-genre">{{ movie.genre }}</div>
+            <div class="movie-release-date">{{ movie.releaseDateText }}</div>
+        </div>
+    </div>
+
+    <div class="movie-description">
+        {{ movie.description }}
+    </div>
+</div>
