@@ -32,3 +32,13 @@ div.clearfix:after {
     display: table;
 }
 
+div.back-nav.back-nav {
+    padding-top: 50px !important;
+}
+
+div.back-nav > a {
+    background-color: crimson;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}
