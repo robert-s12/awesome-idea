@@ -16,7 +16,9 @@
             <span class="data">{{ movie.revenue | currency }}</span>
         </div>
 
-        <div class="movie-log-me">
-            <span class="button" (click)="onLogMe()">Log Me</span>
+        <div class="movie-details">
+            <a class="button" routerLink="{{ '/info/' + movie.id }}">
+                View Details
+            </a>
         </div>
     </div>

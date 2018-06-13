@@ -29,15 +29,16 @@ div.movie-list span.data {
     padding-left: 4px;
 }
 
-div.movie-list > div.movie-log-me {
+div.movie-list > div.movie-details {
     cursor: pointer;
     position: relative;
     text-align: center;
     top: 20px;
 }
 
-div.movie-list > div.movie-log-me > span.button {
-    background-color: red;
+div.movie-list > div.movie-details > a.button {
+    background-color: crimson;
     color: white;
     padding: 5px;
+    text-decoration: none;
 }

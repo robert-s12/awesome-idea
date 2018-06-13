@@ -24,8 +24,4 @@ export class MovieListComponent {
     constructor (private movieListService: MovieListDataService) {}
 
     movies: Movie[] = this.movieListService.getMovies();
-
-    onLogMe() {
-        console.log("Logging Movie Info");
-    }
 }

@@ -4,6 +4,7 @@ import { NgModule } from "@angular/core";
 import { AppRootComponent } from "./app.component";
 import { MovieListComponent } from "./movie.list/movie.list.component";
 import { MovieInfoComponent } from "./movie.info/movie.info.component";
+import { MOVIE_ROUTING } from "./app.routing";
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { MovieInfoComponent } from "./movie.info/movie.info.component";
     ],
 
     imports: [
-        BrowserModule
+        BrowserModule,
+        MOVIE_ROUTING
     ],
 
     providers: [],

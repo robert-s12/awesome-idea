@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 
 import { Movie } from "../models/Movie";
 import { MovieListDataService } from "../services/movie.list.data.service";
@@ -20,20 +21,32 @@ const componentMetadata: any = {
 
 
 @Component(componentMetadata)
-export class MovieInfoComponent {
-    movieId: number;
+export class MovieInfoComponent implements OnInit {
+    constructor(
+        private movieDataService: MovieListDataService,
+        private activatedRoute: ActivatedRoute) {}
 
-    constructor(private movieDataService: MovieListDataService) {}
-
-    movie: Movie = this.movieDataService
-            .getMovieById(this.getMovieId());
+    movie: Movie;
 
 
-    getMovieId(): number {
-        let movieId: number = this.movieId
-                ? this.movieId
-                : 1;
-
+    getMovieId(movieId: any): number {
+        movieId = isNaN(movieId) ? 1 : Number(movieId);
         return movieId;
+    }
+
+
+    loadMovieInformation(movieId: number): void {
+        movieId = this.getMovieId(movieId);
+        this.movie = this.movieDataService
+                .getMovieById(movieId);
+    }
+
+
+    ngOnInit(): void {
+        this.activatedRoute.params
+                .subscribe(params => {
+                    let movieId = params["movieId"];
+                    this.loadMovieInformation(movieId);
+                })
     }
 }
