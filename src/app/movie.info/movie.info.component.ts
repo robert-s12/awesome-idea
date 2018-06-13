@@ -5,7 +5,7 @@ import { Movie } from "../models/Movie";
 import { MovieListDataService } from "../services/movie.list.data.service";
 
 
-const componentMetadata: any = {
+const COMPONENT_METADATA: any = {
     selector: "ai-movie-info",
 
     providers: [
@@ -20,7 +20,7 @@ const componentMetadata: any = {
 };
 
 
-@Component(componentMetadata)
+@Component(COMPONENT_METADATA)
 export class MovieInfoComponent implements OnInit {
     constructor(
         private movieDataService: MovieListDataService,
